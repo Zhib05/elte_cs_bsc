@@ -1,0 +1,95 @@
+    1. Melyek azok a PC modellek, amelyek sebessége legalább 3.00?
+
+pi modell sigma sebesseg >= 3 PC
+
+-------------------------------------------
+
+    2. Mely gyártók készítenek legalább száz gigabájt méretű merevlemezzel
+        rendelkezı laptopot?
+
+T = pi gyarto, modell Termek
+P = pi modell, merevlemez PC
+pi gyarto, merevlemez sigma merevlemez >= 100 (T ⨝ P)
+
+-------------------------------------------
+
+    3. Adjuk meg a B gyártó által gyártott összes termék modellszámát és 	árát, típustól függetlenül.
+
+T = Termek
+P = pi modell, ar PC
+L = pi modell, ar Laptop
+Ny = pi modell, ar Nyomtato
+pi modell, ar sigma gyarto='B' ((T ⨝ P) union (T ⨝ L) union (T ⨝ Ny))
+
+-------------------------------------------
+
+    4. Adjuk meg valamennyi színes lézernyomtató modellszámát.
+
+pi modell sigma szines='igen' and tipus='lézer' Nyomtato
+
+-------------------------------------------
+
+    5. Melyek azok a gyártók, akik laptopot árulnak, PC-t viszont nem?
+
+pi gyarto sigma tipus='laptop' Termek
+-
+pi gyarto sigma tipus='pc' Termek
+
+-------------------------------------------
+
+    6. Melyek azok a merevlemezméretek, amelyek legalább két PC-ben 	megtalálhatók?
+
+P = pi modell, merevlemez PC
+pi P1.merevlemez sigma P1.merevlemez = P2.merevlemez and P1.modell != P2.modell (rho P1 P x rho P2 P)
+
+-------------------------------------------
+
+    7. Adjuk meg azokat a PC modell párokat, amelyek ugyanolyan gyorsak és
+        a memóriájuk is ugyanakkora. Egy pár csak egyszer jelenjen meg, azaz
+        ha már szerepel az (i, j), akkor a (j, i) ne jelenjen meg.
+
+P = pi modell, sebesseg, memoria PC
+sigma P1.modell < P2.modell and P1.sebesseg = P2.sebesseg and P1.memoria = P2.memoria (rho P1 P x rho P2 P)
+
+-------------------------------------------
+
+    8. Melyik gyártó gyártja a leggyorsabb számítógépet (PC-t vagy laptopot)?
+
+T = Termek
+P = pi modell, sebesseg PC
+L = pi modell, sebesseg Laptop
+S = (T ⨝ P union T ⨝ L)
+pi gyarto (S
+-
+pi S1.* sigma S1.sebesseg < S2.sebesseg (rho S1 S x rho S2 S))
+
+-------------------------------------------
+    9. Melyik gyártó gyárt legalább három, különböző sebességű PC-t?
+
+1.mo
+T = pi gyarto, modell Termek
+P = pi modell, sebesseg PC
+sigma T1.modell < T2.modell and T2.modell < T3.modell and T1.modell < T3.modell
+and T1.gyarto = T2.gyarto and T2.gyarto = T3.gyarto and T1.gyarto = T3.gyarto
+and P1.sebesseg != P2.sebesseg and P2.sebesseg != P3.sebesseg and P1.sebesseg != P3.sebesseg
+((rho T1 T ⨝ rho P1 P) x (rho T2 T ⨝ rho P2 P) x (rho T3 T ⨝ rho P3 P))
+
+2.mo (egyszerubb)
+TP = pi gyarto, sebesseg(Termek ⨝ PC)
+pi TP1.gyarto (sigma TP1.gyarto=TP2.gyarto and TP2.gyarto = TP3.gyarto 
+and TP1.sebesseg < TP2.sebesseg and TP2.sebesseg < TP3.sebesseg 
+(rho TP1 TP x rho TP2 TP x rho TP3 TP))
+
+-------------------------------------------
+
+  10. Melyek azok a gyártók, akik pontosan három típusú PC-t forgalmaznak?
+
+T = pi gyarto, modell sigma tipus='pc' Termek
+
+L3 = pi T1.gyarto (sigma T1.modell < T2.modell and T2.modell < T3.modell
+and T1.gyarto = T2.gyarto and T2.gyarto = T3.gyarto (rho T1 T x rho T2 T x rho T3 T))
+
+L4 = pi T1.gyarto (sigma T1.modell < T2.modell and T2.modell < T3.modell and T3.modell < T4.modell
+and T1.gyarto = T2.gyarto and T2.gyarto = T3.gyarto and T3.gyarto = T4.gyarto (rho T1 T x rho T2 T x rho T3 T x rho T4 T))
+
+L3 - L4

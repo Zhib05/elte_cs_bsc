@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Kapcsolat - Wellness Központ</title>
+  <link rel="stylesheet" href="css/kapcsolat.css">
+  <link rel="stylesheet" href="css/high-contrast.css" id="highContrastStylesheet" disabled>
+</head>
+<body>
+  <header>
+    <figure>
+      <a href="index1.html"><img src="media/logo.webp" alt="Wellness Központ logó"></a>
+    </figure>
+    <nav>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="index1.html">Kezdőlap</a></li>
+        <li><a href="index1.html#szolgaltatas">Szolgáltatásaink</a></li>
+        <li><a href="arak.html">Árak</a></li>
+        <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
+        <li><a href="index1.html#kepek">Képek</a></li>
+      </ul>
+      <button id="toggleContrast">Nagy kontrasztú mód</button>
+    </nav>
+  </header>
+  <main id="main-content">
+    <a href="#main-content" class="skip-link">Ugrás a tartalomra</a>
+    <section>
+      <h1>Kapcsolat</h1>
+      <div class="contact-info">
+        <p><strong>Cím:</strong> 1117 Budapest, Pázmány Péter stny. 1/C</p>
+        <p><strong>Nyitva tartás:</strong> Hétfő-Péntek: 06:00-23:00, Szombat-Vasárnap: 08:00-20:00</p>
+        <p><strong>Telefon:</strong> +36 30 123 4567</p>
+        <p><strong>Email:</strong> <a href="mailto:wangzhibo08@gmail.com">wangzhibo08@gmail.com</a></p>
+      </div>
+      <form action="mailto:wangzhibo08@gmail.com" method="post" enctype="text/plain">
+          <h2>Oszd meg a véleménydet!</h2>
+          <input type="text" name="name" id="name" size="50" placeholder="Név"><br>
+          <input type="email" name="email" id="email" size="50" placeholder="Email*" required><br>
+          <input type="tel" name="phone" id="phone" size="50" placeholder="Telefonszám"><br>
+          <textarea cols="52" rows="10" name="message" id="message" placeholder="Üzenet"></textarea><br>
+
+          <div class="radio-group">
+            <input type="radio" name="privacy" id="privacy" value="igen" required>
+            <label for="privacy">Elfogadom az adatkezelési tájékoztatót.</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="radio" name="hozzajarulas" id="hozzajarulas" value="igen" required>
+            <label for="hozzajarulas">Hozzájárulok a megadott adataim kezeléséhez.</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" name="marketing" id="marketing" value="igen">
+            <label for="marketing">Hozzájárulok, hogy a megadott email címemre marketing célú üzeneteket küldjenek.</label>
+          </div>
+          <div class="button-group">
+            <input type="submit" value="Küldés">
+            <input type="reset" value="Törlés">
+          </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <h3>Kiemelt Szolgáltatásaink</h3>
+      <ul>
+        <li><a href="index1.html#fitness">Fitness</a></li>
+        <li><a href="index1.html#spa">Spa/Wellness</a></li>
+        <li><a href="index1.html#masszazs">Masszázs</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Elérhetőségek</h3>
+      <p><strong>Cím:</strong> 1117 Budapest, Pázmány Péter stny. 1/C</p>
+      <p><strong>Nyitva tartás:</strong> H-P: 06:00-23:00, SZ-V: 08:00-20:00</p>
+      <p><strong>Telefon:</strong> +36 30 123 4567</p>
+      <p><strong>Email:</strong> <a href="mailto:wangzhibo08@gmail.com">wangzhibo08@gmail.com</a></p>
+    </section>
+  </footer>
+  <script>
+    document.getElementById('toggleContrast').addEventListener('click', () => {
+      const stylesheet = document.getElementById('highContrastStylesheet');
+      stylesheet.disabled = !stylesheet.disabled;
+    });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navUl.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

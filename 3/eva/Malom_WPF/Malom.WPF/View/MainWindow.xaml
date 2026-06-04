@@ -1,0 +1,61 @@
+﻿<Window x:Class="Malom.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Malom.WPF"
+        mc:Ignorable="d"
+        Title="Malom" Height="740" Width="820"
+        Background="White">
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Fájl">
+                <MenuItem Header="Új játék" Command="{Binding NewGameCommand}"/>
+                <MenuItem Header="Betöltés..." Command="{Binding LoadGameCommand}"/>
+                <MenuItem Header="Mentés..." Command="{Binding SaveGameCommand}"/>
+                <Separator/>
+                <MenuItem Header="Kilépés" Command="{Binding ExitCommand}"/>
+            </MenuItem>
+        </Menu>
+
+        <StatusBar DockPanel.Dock="Bottom" Background="LightGray" Height="30">
+            <StatusBarItem>
+                <TextBlock Text="{Binding StatusText}" FontWeight="Bold" FontSize="14"/>
+            </StatusBarItem>
+        </StatusBar>
+
+        <Grid>
+            <Image Source="malom_board.png" Stretch="Uniform" Margin="30"/>
+
+            <Canvas Margin="105,40,105,35">
+                <Button Width="52" Height="52" Canvas.Left="270"  Canvas.Top="0"    Command="{Binding Fields[0].ClickCommand}"  Background="{Binding Fields[0].Background}"  BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="0"    Canvas.Top="260"  Command="{Binding Fields[1].ClickCommand}"  Background="{Binding Fields[1].Background}"  BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="540"  Canvas.Top="260"  Command="{Binding Fields[2].ClickCommand}"  Background="{Binding Fields[2].Background}"  BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="270"  Canvas.Top="530"  Command="{Binding Fields[3].ClickCommand}"  Background="{Binding Fields[3].Background}"  BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="0"    Canvas.Top="0"    Command="{Binding Fields[4].ClickCommand}"  Background="{Binding Fields[4].Background}"  BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="540"  Canvas.Top="0"    Command="{Binding Fields[5].ClickCommand}"  Background="{Binding Fields[5].Background}"  BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="0"    Canvas.Top="530"  Command="{Binding Fields[6].ClickCommand}"  Background="{Binding Fields[6].Background}"  BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="540"  Canvas.Top="530"  Command="{Binding Fields[7].ClickCommand}"  Background="{Binding Fields[7].Background}"  BorderBrush="Black" BorderThickness="3"/>
+
+                <Button Width="52" Height="52" Canvas.Left="75"   Canvas.Top="70"   Command="{Binding Fields[8].ClickCommand}"  Background="{Binding Fields[8].Background}"  BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="470"  Canvas.Top="70"   Command="{Binding Fields[9].ClickCommand}"  Background="{Binding Fields[9].Background}"  BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="75"   Canvas.Top="450"  Command="{Binding Fields[10].ClickCommand}" Background="{Binding Fields[10].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="470"  Canvas.Top="450"  Command="{Binding Fields[11].ClickCommand}" Background="{Binding Fields[11].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="270"  Canvas.Top="70"   Command="{Binding Fields[12].ClickCommand}" Background="{Binding Fields[12].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="270"  Canvas.Top="450"  Command="{Binding Fields[13].ClickCommand}" Background="{Binding Fields[13].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="75"   Canvas.Top="260"  Command="{Binding Fields[14].ClickCommand}" Background="{Binding Fields[14].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="470"  Canvas.Top="260"  Command="{Binding Fields[15].ClickCommand}" Background="{Binding Fields[15].Background}" BorderBrush="Black" BorderThickness="3"/>
+
+                <Button Width="52" Height="52" Canvas.Left="160"  Canvas.Top="155"  Command="{Binding Fields[16].ClickCommand}" Background="{Binding Fields[16].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="370"  Canvas.Top="155"  Command="{Binding Fields[17].ClickCommand}" Background="{Binding Fields[17].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="160"  Canvas.Top="365"  Command="{Binding Fields[18].ClickCommand}" Background="{Binding Fields[18].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="370"  Canvas.Top="365"  Command="{Binding Fields[19].ClickCommand}" Background="{Binding Fields[19].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="270"  Canvas.Top="155"  Command="{Binding Fields[20].ClickCommand}" Background="{Binding Fields[20].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="270"  Canvas.Top="365"  Command="{Binding Fields[21].ClickCommand}" Background="{Binding Fields[21].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="160"  Canvas.Top="260"  Command="{Binding Fields[22].ClickCommand}" Background="{Binding Fields[22].Background}" BorderBrush="Black" BorderThickness="3"/>
+                <Button Width="52" Height="52" Canvas.Left="370"  Canvas.Top="260"  Command="{Binding Fields[23].ClickCommand}" Background="{Binding Fields[23].Background}" BorderBrush="Black" BorderThickness="3"/>
+            </Canvas>
+        </Grid>
+    </DockPanel>
+</Window>

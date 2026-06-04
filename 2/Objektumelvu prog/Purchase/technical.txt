@@ -1,0 +1,5 @@
+﻿telefon 10000
+telefon 9000
+tablagep 5000
+tablagep 9000
+tolto 2000

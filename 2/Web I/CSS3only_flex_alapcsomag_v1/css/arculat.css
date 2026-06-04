@@ -1,0 +1,285 @@
+@import url("tablazat.css");
+
+:root {
+    --main-color: #724b39;
+    --link-normal:#0064b3;
+    --link-visited:#8835ab;
+    --link-hover:blue;
+    --link-active:red;/* KITÖLTENI - link aktív állapot*/
+    --bg-color:white;
+    --text-color:black;
+    --border-color:gray;
+    --secondary-color:lightgray; 
+    /* CSS változók beállítása */
+    font-size: 16px;
+    /* Alap betűméret beállítása */
+}
+
+body {
+    background-image: url("../media/hatter.jpg");
+    /* KITÖLTENI - Háttérkép beállítása */
+    background-color: cover;
+    /* KITÖLTENI - Háttérkép méretének beállítása */
+    background-attachment: fixed;
+    /* KITÖLTENI - A háttérkép a görgetés során nem mozdul el */
+    margin: 20px 0;
+    /* Felső és alsó margó 20px, oldalsó margó 0px */
+    font-family: Arial, sans-serif;
+    /* Betűtípus beállítása */  
+}
+
+div.container {
+    background-color: var(--bg-color);
+    /* Háttérszín beállítása */
+    color: var(--text-color);
+    /*Szövegszín beállítása*/
+    border: 2px solid var(--text-color);
+    /* KITÖLTENI - Szegély beállítása */
+    border-radius: 10px;
+    /* KITÖLTENI - Szegély lekerekítés beállítása 30px*/
+    box-shadow: 5px 5px 10px black;
+    /* KITÖLTENI - Az elemnek 5px jobbra és lefelé eltolva, 10px elmosással fekete árnyékot ad */
+}
+
+
+
+p {
+    margin: 10px 0;
+    /* Felső és alsó margó 10px, oldalsó margó 0px */
+    line-height: 150%;
+    /* KITÖLTENI - Sorok közötti távolság beállítása */
+}
+
+
+li {
+    margin-left: 2em;
+    /* KITÖLTENI - Az elem bal oldalán  margót állít be */
+    padding: 5px;
+    /* Belső margó beállítása */
+}
+
+h2,
+h3 {
+    color: var(--main-color);
+    /* Szöveg színének beállítása */
+    margin-bottom: 10px;
+    /* Az elem alá 10px külső margót állít be */
+}
+
+h1 {
+    font-size:1.5em;
+    /* Relatív betűméret beállítása*/
+    text-align: center;
+    /* Szöveg igazítása */
+    background-color: var(--main-color);
+    /* Háttérszín beállítása */
+    padding: 10px;
+    /* Belső margó beállítása */
+    color: var(--bg-color);
+    /* Szöveg színének beállítása */
+    text-shadow: 3px 5px 6px black;
+    /* KITÖLTENI - A szövegnek 3px jobbra, 5px lefelé eltolva, 6px elmosással fekete árnyékot ad */
+    border-radius: 5px 5px 0 0;
+    /* KITÖLTENI - A felső sarkokat 5px-re lekerekíti, az alsó sarkokat élesen hagyja */
+    background: linear-gradient(to right, var(--main-color) 30%, black);
+    /* KITÖLTENI - Jobbra haladó színátmenet, ahol a --main-color 30%-ig tart, majd feketébe vált */
+}
+
+
+
+
+/* LINKEK */
+
+a:link {
+    color: var(--link-normal)
+        /* szövegszín beállítása */
+}
+
+a:visited {
+    color: var(--link-visited)
+        /* szövegszín beállítása */
+}
+
+a:hover {
+    color:  var(--link-hover)
+        /* szövegszín beállítása */
+}
+
+a:active {
+
+    color: var(--link-active)
+        /* szövegszín beállítása */
+}
+
+a[href^="#"]{
+    text-decoration: none;
+}
+/* KITÖLTENI - Oldalon belüli ugrást megvalósító linkek megjelenése */
+:focus{
+    text-decoration: underline;
+    outline: 4px splid purple;
+}
+/* KITÖLTENI - Fókuszba kerülő elemek megjelenése (aláhúzás eltávolítás, körvonal beállítása */
+
+a[href^="mailto"]:before{
+    content: "✉️";
+    padding-right: 5px;
+    display: inline-block;
+}
+/* KITÖLTENI - e-mail címre mutató link megejelenése */
+
+
+/* TÁBLÁZATOK */
+
+table {
+    border: 1px solid var(--border-color);
+    /* Szürke, 1px vastag, folytonos vonalú szegély beállítása */
+    
+  /* KITÖLTENI - táblázat szegélyeinek összevonása */
+
+    width: 100%;
+    /* Az elem teljes szélességet elfoglalja a szülőjén belül */
+}
+
+table td,
+table th {
+    border: 1px solid var(--border-color);
+    /* szegély beállítása */
+    padding: 5px;
+    /* Belső margó beállítása */
+}
+
+caption {
+    caption-side: bottom;
+    /* A táblázat címe (caption) az aljára kerül */
+}
+
+th {
+    text-align: right;
+    /* Szöveg igazítása */
+}
+
+    th[scope="row"]:after {
+        content: "➡️";
+        /* A pseudo-elemnél egy jobbra mutató nyíl jelenik meg tartalomként */
+    }
+  /* KITÖLTENI - scope="row" osztályú fejléc cellák megjelenítése */
+
+
+/* ILLUSZTRÁCIÓK, ELŐRE FORMÁZOTT ELEMEK */
+
+pre {
+    white-space: pre-wrap;
+    overflow: auto;
+   /* KITÖLTENI - white-space, overflow wrap */
+    overflow-x: auto;
+    /* Vízszintes görgetés, ha szükséges */
+    max-width: 100%;
+    /* Maximális szélesség beállítása */
+    padding: 10px;
+    /* Belső margó beállítása */
+    text-align: left;
+    /* Szöveg igazítása */
+}
+
+figcaption,
+footer {
+    text-align: center;
+    /* Szöveg igazítása */
+    padding: 10px;
+    /* Belső margó beállítása */
+}
+
+figure:has(pre) { /* KITÖLTENI  */
+    background-color: black;
+    /* Háttérszín beállítása */
+    color: white;
+    /* Szöveg színének beállítása */
+}
+
+
+/* TOVÁBBI BEÁLLÍTÁSOK HALADÓ SZELEKTORLÁNCOK ALKALMAZÁSÁVAL */
+
+main h2:before { /* KITÖLTENI  */
+    content: '🎞️';
+    /* A pseudo-elemnél egy filmtekercs emoji jelenik meg tartalomként */
+
+    padding-right: 10px;
+    /* Az elem jobb oldalán 10px belső térközt állít be */
+}
+
+main>article:last-child h2:before { /* KITÖLTENI  */
+    content: '📚';
+    /* A pseudo-elemnél egy könyvtekercs emoji jelenik meg tartalomként */
+    padding-right: 10px;
+    /* Az elem jobb oldalán 10px belső térközt állít be */
+}
+
+h3+p { /* KITÖLTENI  */
+    background-color: var(--secondary-color);
+    /* Háttérszín beállítása */
+    border: 1px dotted var(--border-color);
+    /* szegély beállítása */
+    padding: 5px;
+    /* Belső margó beállítása */
+}
+
+tr:nth-child(2n+1) { /* KITÖLTENI  */
+    background-color: var(--secondary-color);
+    /* Az elem háttérszínét világosszürkére állítja */
+}
+
+
+*:lang(en) { /* KITÖLTENI  */
+    font-style: italic;
+    /* A szöveget dőlt stílusúvá teszi */
+}
+
+::selection { /* KITÖLTENI  */
+    background-color: var(--main-color);
+    /* Háttérszín beállítása */
+    color: white;
+    /* Szöveg színének beállítása */
+}
+
+
+/*ŰRLAP OLDAL SPECIALITÁSAI*/
+
+#canvas {
+    float: right;
+    /* KITÖLTENI  - Az elemet balra igazítja, a következő tartalom körbefolyhatja */
+    margin-right: 50px;
+    /* Az elem jobb oldalán 50px külső margót állít be */
+}
+
+
+fieldset {
+    background-color: var(--secondary-color);
+    /* Háttérszín beállítása */
+    padding: 10px
+}
+
+
+/* nyomtatás */
+.nyomtatas{
+    display: none;
+} /* KITÖLTENI - nyomtatásra szánt elemek eltüntetése */
+
+
+/* BETŰMÉRET FINOMHANGOLÁS */
+body{
+    font-size: clamp(16px, 3vw, 24px);
+}
+
+/* KITÖLTENI - Reszponzív betűméret beállítása. Preferált: 3vw, minimum: 16px, maximum 24px */
+select, form *{
+    font-size: inherit;
+}
+
+/* KITÖLTENI - Annak beállítása, hogy a betűméret öröklődjön, mert sajnos űrlapelemeknél ez nem történik meg */
+input[type="url"], input[type="text"], input[type="email"], textarea{
+    max-width: 400px;
+    width: 100%;
+}
+/* KITÖLTENI - input, textarea űrlapelemek maximális szélességének beállítása */
+

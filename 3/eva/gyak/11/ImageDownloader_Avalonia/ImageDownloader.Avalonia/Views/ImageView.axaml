@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:ELTE.ImageDownloader.Avalonia.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
+             x:Class="ELTE.ImageDownloader.Avalonia.Views.ImageView"
+             x:DataType="vm:ImageViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:ImageViewModel>
+      <x:Arguments>
+        <Bitmap>
+          <x:Arguments>
+            <x:String>ImageDownloader.Avalonia/Assets/avalonia-logo.ico</x:String>
+          </x:Arguments>
+        </Bitmap>
+      </x:Arguments>
+    </vm:ImageViewModel>
+  </Design.DataContext>
+
+  <DockPanel>
+    <Button Content="Letöltés" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+            Command="{Binding SaveImageCommand}"
+            DockPanel.Dock="Bottom" />
+    
+    <Button Content="Bezárás" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+            Command="{Binding CloseCommand}"
+            IsVisible="{OnPlatform Android=True, Default=False}"
+            DockPanel.Dock="Bottom" />
+    
+    <Image Source="{Binding Image}"/>
+  </DockPanel>
+
+</UserControl>

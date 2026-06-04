@@ -1,0 +1,51 @@
+4. Kik azok a dolgozók, akik osztályának telephelye DALLAS vagy CHICAGO?
+D = pi dkod, dnev, oazon dolgozo
+O = pi * osztaly
+pi dkod, dnev, telephely sigma telephely = 'DALLAS' or telephely = 'CHICAGO' (D ⨝ O)
+
+----------------------------------------
+
+ 5. Kik azok a dolgozók, akik osztályának telephelye nem DALLAS és nem CHICAGO?
+D = pi dkod, dnev, oazon dolgozo
+O = pi * osztaly
+pi dkod, dnev, telephely sigma telephely != 'DALLAS' and telephely != 'CHICAGO' (D ⨝ O)
+
+----------------------------------------
+
+6. Kik azok a dolgozók, akiknek a legmagasabb a fizetésük!
+D = pi dkod, dnev, fizetes dolgozo
+D
+-
+pi D1.*(sigma D1.fizetes < D2.fizetes (rho D1 D x rho D2 D))
+
+----------------------------------------
+
+7. Kik azok a dolgozók, akiknek van 2000-nél nagyobb fizetésű beosztottja.
+D = pi dkod, dnev, fonoke, fizetes dolgozo
+pi D1.dkod, D1.dnev(sigma D1.dkod = D2.fonoke and D2.fizetes > 2000 (rho D1 D x rho D2 D))
+
+----------------------------------------
+
+8. Kik azok a dolgozók, akiknek nincs 2000-nél nagyobb fizetésű beosztottja.
+D = pi dkod, dnev, fonoke, fizetes dolgozo
+pi dkod, dnev(D
+-
+pi D1.*(sigma D1.dkod = D2.fonoke and D2.fizetes > 2000 (rho D1 D x rho D2 D)))
+
+----------------------------------------
+
+9. Mely telephelyeken van elemző (ANALYST) foglalkozású dolgozó.
+D = pi dnev, foglalkozas, oazon dolgozo
+O = pi oazon,onev, telephely osztaly
+pi O.telephely sigma D.foglalkozas = 'ANALYST'(D ⨝ O)
+
+----------------------------------------
+
+10. Mely telephelyeken nincs elemző (ANALYST) foglalkozású dolgozó.
+D = pi dnev, foglalkozas, oazon dolgozo
+O = pi oazon,onev, telephely osztaly
+pi telephely(O
+-
+(pi oazon, onev, telephely sigma D.foglalkozas = 'ANALYST'(D ⨝ O)))
+
+----------------------------------------

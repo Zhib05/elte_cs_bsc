@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Kezdőlap - Wellness Központ</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/high-contrast.css" id="highContrastStylesheet" disabled>
+</head>
+<body>
+  <div class="container">
+  <a href="#main-content" class="skip-link">Ugrás a tartalomra</a>
+  <header>
+    <figure>
+      <a href="index1.html"><img src="media/logo.webp" alt="Wellness Központ logó"></a>
+    </figure>
+    <nav>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="index1.html" class="active">Kezdőlap</a></li>
+        <li><a href="#szolgaltatas">Szolgáltatásaink</a></li>
+        <li><a href="arak.html">Árak</a></li>
+        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        <li><a href="#kepek">Képek</a></li>
+      </ul>
+      <button id="toggleContrast">Nagy kontrasztú mód</button>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="video-section">
+      <h1>Kezdőlap</h1>
+      <div class="video-container">
+        <video src="media/wellness_center.mp4" controls poster="media/poster.png">
+        </video>
+      </div>
+      <details>
+        <summary>Videó leírása</summary>
+        <p>A videóban a Wellness Központunk látható. Bemutatjuk a fitnessztermet, ahol vendégek edzenek, majd a spa részleget, ahol masszázs és szauna szolgáltatásokat kínálunk. Van csoportos edzési lehetőség és személyes edző is van. A videó 1 perc 14 másodperc hosszú, és a narrátor végig angolul beszél.</p>
+      </details>
+    </section>
+    <section id="szolgaltatas">
+      <h2>Szolgáltatásaink</h2>
+      <article class="service">
+        <h3 id="fitness">Fitness</h3>
+        <div class="service-content">
+          <img src="media/Fitness.jpg" alt="Fitnesszterem emberekkel és edzőfelszerelésekkel">
+          <p>Segítünk, hogy megvalósítsd álmaid és elérd céljaid! Életünk a mozgás! Töltődj fel, kapcsolódj ki sportközpontunkban! Erősítő gépparkkal, és a szabad súlyok széles választékával nyújtunk lehetőséget a különböző izomcsoportok átdolgozására.<br>
+            <a href="https://www.healthline.com/fitness">Olvass többet a Fitnessről</a></p>
+        </div>
+      </article>
+      <article class="service">
+        <h3 id="spa">Spa/Wellness</h3>
+        <div class="service-content">
+          <img src="media/spa.jpg" alt="Spa részleg úszómedencével és szaunával">
+          <p>A kemény edzések vagy egy fárasztó munkanap után jól esne egy kis pihenés és kényeztetés? 14 év feletti vendégeinket várjuk wellness részlegünkben az alábbi szolgáltatásokkal: Szauna, gőzkabin, napozó terasz.<br>
+            <a href="https://globalwellnessinstitute.org/what-is-wellness/">Tudj meg többet a Wellnessről</a></p>
+        </div>
+      </article>
+      <article class="service">
+        <h3 id="masszazs">Masszazs</h3>
+        <div class="service-content">
+          <img src="media/massage.webp" alt="Masszázsszoba egy vendéggel és masszőrrel">
+          <p>A fárasztó edzések után válaszd te is a testi lelki felfrissülést és regenerálódást hagyományos és különleges masszázsaink segítségével! Masszőrünk elérhetősége: +36 30 123 4567, Csütörtök: 10-20, Péntek: 10-20 bejelentkezés alapján.<br>
+            <a href="https://www.self.com/story/benefits-of-massage">A Masszázs előnyei</a></p>
+        </div>
+      </article>
+    </section>
+    <section id="kepek">
+      <h2>Képek</h2>
+      <div class="gallery">
+        <figure class="row-1">
+          <a href="media/kep1.jpg"><img src="media/kep1.jpg" alt="Fitnesszterem belső képe"></a>
+        </figure>
+        <figure class="row-1">
+          <a href="media/kep2.jpg"><img src="media/kep2.jpg" alt="Büfé"></a>
+        </figure>
+        <figure class="row-1">
+          <img src="media/kep3.jpg" alt="Fitnesszterem belső képe">
+        </figure>
+        <figure class="row-2">
+          <img src="media/kep4.jpg" alt="Fitnesszterem belső képe">
+        </figure>
+        <figure class="row-2">
+          <img src="media/kep5.jpg" alt="Edzőterem súlyokkal">
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <h3>Kiemelt Szolgáltatásaink</h3>
+      <ul>
+        <li><a href="#fitness">Fitness</a></li>
+        <li><a href="#spa">Spa/Wellness</a></li>
+        <li><a href="#masszazs">Masszázs</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Elérhetőségek</h3>
+      <p><strong>Cím:</strong> 1117 Budapest, Pázmány Péter stny. 1/C</p>
+      <p><strong>Nyitva tartás:</strong> H-P: 06:00-23:00, SZ-V: 08:00-20:00</p>
+      <p><strong>Telefon:</strong> +36 30 123 4567</p>
+      <p><strong>Email:</strong> <a href="mailto:wangzhibo08@gmail.com">wangzhibo08@gmail.com</a></p>
+    </section>
+  </footer>
+  </div>
+  <script>
+    document.getElementById('toggleContrast').addEventListener('click', () => {
+      const stylesheet = document.getElementById('highContrastStylesheet');
+      stylesheet.disabled = !stylesheet.disabled;
+    });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navUl.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

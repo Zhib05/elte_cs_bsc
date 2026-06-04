@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocuStatView", "DocuStatView.csproj", "{72E8CBEF-2E25-477D-A081-59C55B2FE265}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocuStat", "..\..\1\DocuStat.Complete\DocuStat\DocuStat.csproj", "{3B4DC8DE-3BAD-A040-F62C-8A88B35743B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72E8CBEF-2E25-477D-A081-59C55B2FE265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E8CBEF-2E25-477D-A081-59C55B2FE265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E8CBEF-2E25-477D-A081-59C55B2FE265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E8CBEF-2E25-477D-A081-59C55B2FE265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4DC8DE-3BAD-A040-F62C-8A88B35743B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4DC8DE-3BAD-A040-F62C-8A88B35743B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4DC8DE-3BAD-A040-F62C-8A88B35743B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4DC8DE-3BAD-A040-F62C-8A88B35743B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B496B6F-DEC5-41F4-A62A-52795FDB7832}
+	EndGlobalSection
+EndGlobal

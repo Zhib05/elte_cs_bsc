@@ -1,0 +1,65 @@
+body {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+main {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  border-radius: 10px !important;
+  box-shadow: 5px 5px 10px #000 !important;
+}
+
+a {
+  color: #ff0 !important;
+}
+
+header, footer {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+nav ul li a {
+  color: #fff !important;
+}
+
+nav ul li a:visited {
+  color: #ccc !important;
+}
+
+nav ul li a.active {
+  color: #ff0 !important;
+}
+
+table {
+  background-color: #333 !important;
+  border-color: #fff !important;
+}
+
+th, td {
+  background-color: #333 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+tr:nth-child(odd) th, tr:nth-child(odd) td {
+  background-color: #333 !important;
+}
+
+tr:nth-child(even) th, tr:nth-child(even) td {
+  background-color: #555 !important;
+}
+
+form input, 
+form textarea{
+  background-color: #ccc !important;
+  color: #000 !important;
+  border: 1px solid #fff !important;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+  color: #fff !important;
+  background-color: green !important;
+}
