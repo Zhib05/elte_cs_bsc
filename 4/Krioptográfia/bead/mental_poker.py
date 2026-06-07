@@ -1,5 +1,5 @@
 """
-Mental Poker implementáció (SRA protokoll) - Végleges verzió
+Mental Poker implementáció (SRA protokoll)
 ---------------------------------------------------------
 Tartalmazza az 5-lapos cserés pókert és a Texas Hold'em-et,
 beleértve a kártyák kiértékelését és a nyertes kihirdetését.
@@ -156,7 +156,7 @@ def run_texas_holdem():
     
     # Showdown (Mivel mindenki tartotta a tétet)
     print("\n--- SHOWDOWN ---")
-    # A privát értékeket itt fedjük fel egymásnak, ahogy a feladat kéri
+    # A privát értékeket itt fedjük fel egymásnak
     print(f"Mindenki megadta a tétet, privát értékek felfedése kötelező!")
     print(f"Alice (x): {alice.x} | Bob (x): {bob.x}")
     
