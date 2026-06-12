@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:mintaZh_Invazio_Avalonia.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:mintaZh_Invazio_Avalonia.Views"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="600"
+        x:Class="mintaZh_Invazio_Avalonia.Views.MainWindow"
+        x:DataType="vm:InvasionViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Inv¨¢zi¨® J¨¢t¨¦k"
+        Width="450" Height="700">
+
+        <Grid RowDefinitions="Auto, *">
+        <Border Grid.Row="0" Background="LightGray" Padding="10">
+            <TextBlock Text="{Binding StatusText}" 
+                       HorizontalAlignment="Center" 
+                       FontSize="18" 
+                       FontWeight="Bold"/>
+        </Border>
+
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding Fields}" Margin="10">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="12" Columns="6"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Command="{Binding ClickCommand}"
+                            Background="{Binding Color}"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            BorderThickness="1"
+                            BorderBrush="Black"
+                            CornerRadius="0">
+                        
+                        <TextBlock Text="{Binding Text}" 
+                                   FontSize="20" 
+                                   FontWeight="Bold"
+                                   Foreground="Black"/>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+
+</Window>

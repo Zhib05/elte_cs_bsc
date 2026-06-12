@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malom.WPF", "Malom.WPF.csproj", "{11594C06-06AE-4DAA-ADA4-B8FE877A8FBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malom", "..\Malom\Malom.csproj", "{3F725982-8A1E-48BE-B9AC-C77D9C05FB30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malom.Test", "..\Malom.Test\Malom.Test.csproj", "{FCBD7E38-2C6A-4D2F-857A-43139355D57C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11594C06-06AE-4DAA-ADA4-B8FE877A8FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11594C06-06AE-4DAA-ADA4-B8FE877A8FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11594C06-06AE-4DAA-ADA4-B8FE877A8FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11594C06-06AE-4DAA-ADA4-B8FE877A8FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F725982-8A1E-48BE-B9AC-C77D9C05FB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F725982-8A1E-48BE-B9AC-C77D9C05FB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F725982-8A1E-48BE-B9AC-C77D9C05FB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F725982-8A1E-48BE-B9AC-C77D9C05FB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCBD7E38-2C6A-4D2F-857A-43139355D57C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBD7E38-2C6A-4D2F-857A-43139355D57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBD7E38-2C6A-4D2F-857A-43139355D57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBD7E38-2C6A-4D2F-857A-43139355D57C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4490720-C1C7-421F-B643-99AAEA2E4C80}
+	EndGlobalSection
+EndGlobal

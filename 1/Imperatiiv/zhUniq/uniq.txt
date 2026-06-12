@@ -1,7 +1,0 @@
-abcdef
-xYZ
-abcdefghi
-Xyz
-xyzwu
-abcdef
-xyz

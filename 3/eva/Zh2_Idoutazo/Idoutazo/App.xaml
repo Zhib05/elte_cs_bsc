@@ -1,8 +1,0 @@
-﻿<Application x:Class="Idoutazo.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Idoutazo">
-    <Application.Resources>
-         
-    </Application.Resources>
-</Application>

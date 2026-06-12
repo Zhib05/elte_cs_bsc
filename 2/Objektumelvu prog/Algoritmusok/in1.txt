@@ -1,5 +1,0 @@
-﻿Kaktusz1 zöld Mexikói 200
-Kaktusz2 piros Magyar 100
-Kaktusz3 sárga Mexikói 300
-Kaktusz4 piros Mexikói 400
-Kaktusz5 fehér Mexikói 500

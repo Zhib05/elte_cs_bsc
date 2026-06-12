@@ -9,8 +9,6 @@ import random
 import math
 import itertools
 
-# ─── 1. Kriptográfiai alapok ───────────────────────────────────────────
-
 P = 4787  # Biztonságos prím
 G = 2     # Generátor
 PHI = P - 1

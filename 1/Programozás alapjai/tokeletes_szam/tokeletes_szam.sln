@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tokeletes_szam", "tokeletes_szam.csproj", "{D5DA823F-50A3-4820-BD59-11A01FDFBE4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5DA823F-50A3-4820-BD59-11A01FDFBE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5DA823F-50A3-4820-BD59-11A01FDFBE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5DA823F-50A3-4820-BD59-11A01FDFBE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5DA823F-50A3-4820-BD59-11A01FDFBE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9E7DC0A-AB94-4D57-9D97-F2A8D758ABBB}
+	EndGlobalSection
+EndGlobal

@@ -1,7 +1,0 @@
-abc
-abcd
-aBcde
-abcdef
-abcde
-abcd
-abc
