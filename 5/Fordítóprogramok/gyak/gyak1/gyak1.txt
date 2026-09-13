@@ -1,0 +1,38 @@
+Számok:
+egész szám (legalább egy 0 és 9 közötti számjegyet tartalmaz)
+olyan egész szám, amely nem kezdődhet vezető nullával (kivéve magát a 0-t)
+előjeles egész szám (első karakterként opcionálisan + vagy − jellel)
+tizedespontot tartalmazó törtszám (a tizedespont előtt legalább egy számjeggyel)
+
+^((\+|-)?[1-9][0-9]*|0)(\.[0-9]+)?$
+
+==========================================================================================
+
+Azonosító: 
+kisbetűvel kezdődik; ezt követően tetszőleges számú kis- és nagybetűt, számjegyet, valamint _ (aláhúzás) karaktert tartalmazhat
+2. változat: az utolsó karakter nem lehet _ (aláhúzás)
+
+^([a-z][a-zA-Z0-9_]*[a-zA-Z0-9]|[a-z])$
+
+3. változat: két _ (aláhúzás) nem állhat egymás mellett (az a_a_a érvényes, az a__a viszont nem).
+
+^([a-z]_?([a-zA-Z0-9]_?)*[a-zA-Z0-9]|[a-z])$
+^([a-z](_?[a-zA-Z0-9])*|[a-z])$
+
+==========================================================================================
+
+Egysoros megjegyzés: // jellel kezdődik, és a sor végéig tart.
+\/\/.*
+
+==========================================================================================
+
+Többsoros megjegyzés: /* jellel kezdődik, és az első */ jellel zárul.
+1. változat: a megjegyzés belseje csak betűket tartalmazhat.
+
+\/\*[^*]*\*\/
+
+2. változat: a megjegyzés belseje a * (csillag) kivételével bármilyen karaktert tartalmazhat.
+
+\/\*(\*[^\/]|[^*])*\*\/
+
+3. változat: a megjegyzés belsejében a * (csillag) is megengedett.
