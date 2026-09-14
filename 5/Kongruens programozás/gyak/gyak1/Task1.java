@@ -32,7 +32,7 @@ class HelloThread extends Thread {
     }
 }
 
-public class Main {
+public class Task1 {
     public static void main(String[] args) {
         // 2. Hibakezelés (try-catch blokk) a fájlműveletek miatt
         try {

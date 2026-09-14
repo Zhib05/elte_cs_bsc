@@ -1,4 +1,4 @@
-public class ThreadGroupExample {
+public class Task2 {
     public static void main(String[] args) {
         // 1. ThreadGroup (szálcsoport) létrehozása
         ThreadGroup myGroup = new ThreadGroup("Feldolgozó Csoport");
